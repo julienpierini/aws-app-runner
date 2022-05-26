@@ -1,0 +1,28 @@
+repos:
+  # Default pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.2.0
+    hooks:
+      - id: end-of-file-fixer
+  # Editorconfig-checker
+  - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
+    rev: 2.4.0
+    hooks:
+      - id: editorconfig-checker
+  # Terraform-antonbabenko
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.66.0
+    hooks:
+      - id: terraform_docs
+      - id: terraform_providers_lock
+        args:
+            - --args=-platform=darwin_amd64
+            - --args=-platform=linux_amd64
+  # Terraform-gruntwork-io
+  - repo: https://github.com/gruntwork-io/pre-commit
+    rev: v0.1.17
+    hooks:
+      - id: terraform-fmt
+      - id: terraform-validate
+      - id: tflint
+      - id: terragrunt-hclfmt
