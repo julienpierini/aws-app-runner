@@ -25,7 +25,7 @@ $ cd ../ecr
 $ terragrunt init
 $ terragrunt apply
 ```
-5. Push your image into ecr, follow [How to push an image to the ecr repository](https://github.com/julienpierini/aws-app-runner/edit/main/README.md#how-to-push-an-image-to-the-ecr-repository)
+5. Push your image into ecr, follow [How to push an image to the ecr repository](https://github.com/julienpierini/aws-app-runner#how-to-push-an-image-to-the-ecr-repository)
 6. init and deploy the app-runner stack (edit the [app-runner vars](https://github.com/julienpierini/aws-app-runner/blob/main/aws/live/eu-west-1/dev/vars/app-runner.hcl) if needed)
 ```
 $ vim ../vars/app-runner.hcl
